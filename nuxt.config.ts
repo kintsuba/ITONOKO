@@ -21,5 +21,5 @@ export default defineNuxtConfig({
 
   srcDir: "src/",
 
-  modules: ["nuxt-windicss"],
+  modules: ["nuxt-windicss", "unplugin-icons/nuxt"],
 });
