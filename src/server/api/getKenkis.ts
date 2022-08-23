@@ -16,7 +16,7 @@ if (!apps.length) {
 
 export default async (request, response) => {
   const db = getFirestore();
-  const kenkisSnap = await db.collection("Kenkis").get();
+  const kenkisSnap = await db.collection("kenkis").get();
   const kenkisData = kenkisSnap.docs.map((doc) => {
     return {
       id: doc.id,
