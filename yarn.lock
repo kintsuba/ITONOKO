@@ -767,10 +767,10 @@
     protobufjs "^7.0.0"
     yargs "^16.2.0"
 
-"@iconify/json@^2.1.94":
-  version "2.1.94"
-  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-2.1.94.tgz#bb53f535cd05b5cc351350f8d8ad08868c07937d"
-  integrity sha512-/AFIlLMrnuZpWubJgmt1//iEhg6ZnDPMs4J3TvOZLcN2PYQFDnILBe2r8c3wZ3wd/OsDN5LSHJv0l9HJTfpEFw==
+"@iconify/json@^2.1.96":
+  version "2.1.96"
+  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-2.1.96.tgz#65e6e40fbe53bfbc3ca438d24e33d100bf8062a3"
+  integrity sha512-wmc5KRqvKAlAr0bQz3P1UnUCXC9hYu1o89GZFR5Mr5NiUhhNHdbZyosOPnDHXduOa9lTM/ve8/Vo1vR55hCF5A==
   dependencies:
     "@iconify/types" "*"
     pathe "^0.3.0"
@@ -917,7 +917,7 @@
     unimport "^0.4.5"
     untyped "^0.4.4"
 
-"@nuxt/kit@3.0.0-rc.8":
+"@nuxt/kit@3.0.0-rc.8", "@nuxt/kit@^3.0.0-rc.8":
   version "3.0.0-rc.8"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.0.0-rc.8.tgz#e65e739e986abf5bfe99fa44a3bf44bacc66a35a"
   integrity sha512-FkbO7DPkJxuLqeiWEMUI8OWXaQ4qzmreIjslIPrc9buYdB9nbJqVVzQRicxcKzF09R7VwpJTiG6onIZq6iGuDQ==
@@ -2210,7 +2210,7 @@ define-lazy-prop@^2.0.0:
   resolved "https://registry.yarnpkg.com/define-lazy-prop/-/define-lazy-prop-2.0.0.tgz#3f7ae421129bcaaac9bc74905c98a0009ec9ee7f"
   integrity sha512-Ds09qNh8yw3khSjiJjiUInaGX9xlqZDY7JVryGxdxV7NPeuqQfplOpQ66yJFZut3jLa5zOwkXw1g9EI2uKh4Og==
 
-defu@^6.0.0:
+defu@^6.0.0, defu@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/defu/-/defu-6.1.0.tgz#7a5411655da73335c7d933256911f17c74443e2d"
   integrity sha512-pOFYRTIhoKujrmbTRhcW5lYQLBXw/dlTwfI8IguF1QCDJOcJzNH1w+YFjxqy6BAuJrClTy6MUE8q+oKJ2FLsIw==
@@ -4245,20 +4245,20 @@ nuxi@3.0.0-rc.8:
   optionalDependencies:
     fsevents "~2.3.2"
 
-nuxt-windicss@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/nuxt-windicss/-/nuxt-windicss-2.5.0.tgz#3ad230ac65ce76254039e750be8989cbc9d2af70"
-  integrity sha512-h5Wh1Pj5OrYvbQmfarOxi6I366xyPxYVlUIZhu5OPGn0uUaoQIOl5ASR1QD3eR/BH3kdpM/r8wyjikDoW7oSbg==
+nuxt-windicss@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/nuxt-windicss/-/nuxt-windicss-2.5.1.tgz#fae3414432e48a05217dbef35fd58f1e8a282538"
+  integrity sha512-Y3WgRxNYCQ0x4wNsNNOFON4PV86pH2Wy9AiWTGN5LSyuw1u1AVQ7zvg1AxKguVfqAZE6tXVSWXpJPbPWKONFbA==
   dependencies:
-    "@nuxt/kit" "3.0.0-rc.6"
+    "@nuxt/kit" "^3.0.0-rc.8"
     "@windicss/config" "^1.8.7"
     "@windicss/plugin-utils" "^1.8.7"
     consola "^2.15.3"
-    defu "^6.0.0"
+    defu "^6.1.0"
     fs-extra "^10.1.0"
-    h3 "^0.7.12"
-    listhen "^0.2.13"
-    pathe "^0.3.2"
+    h3 "^0.7.15"
+    listhen "^0.2.15"
+    pathe "^0.3.5"
     read-cache "^1.0.0"
     sirv "^2.0.2"
     vite-plugin-windicss "^1.8.7"
@@ -4491,6 +4491,11 @@ pathe@^0.3.0, pathe@^0.3.2, pathe@^0.3.3, pathe@^0.3.4:
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/pathe/-/pathe-0.3.4.tgz#35bfb1e92373f98d9711cc74e7d6475a0654deae"
   integrity sha512-YWgqEdxf36R6vcsyj0A+yT/rDRPe0wui4J9gRR7T4whjU5Lx/jZOr75ckEgTNaLVQABAwsrlzHRpIKcCdXAQ5A==
+
+pathe@^0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/pathe/-/pathe-0.3.5.tgz#87e5c1164ded1bebeb9dea5dab63563144062303"
+  integrity sha512-grU/QeYP0ChuE5kjU2/k8VtAeODzbernHlue0gTa27+ayGIu3wqYBIPGfP9r5xSqgCgDd4nWrjKXEfxMillByg==
 
 perfect-debounce@^0.1.3:
   version "0.1.3"
