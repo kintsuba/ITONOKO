@@ -1,6 +1,9 @@
 <template>
-  <div class="flex flex-col">
-    <div class="border p-1.5 mx-1.5 mb-1">
+  <div class="flex flex-col items-stretch">
+    <div
+      class="border py-1.5 px-5 mr-1.5 mb-3"
+      :class="[isDisplayedSearchMenu ? 'ml-1.5' : 'ml-auto']"
+    >
       <div class="flex justify-end">
         <div
           class="flex items-center cursor-pointer"
@@ -21,7 +24,7 @@
       </div>
       <div
         v-if="isDisplayedSearchMenu"
-        class="mx-auto w-6/7 md:w-5/7 lg:w-4/7 xl:w-3/7 my-8"
+        class="mx-auto w-full lg:w-5/7 xl:w-4/7 my-8"
       >
         <div class="grid grid-cols-3 gap-4 items-center">
           <label class="font-bold mr-3">建姫名</label>
