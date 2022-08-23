@@ -4,6 +4,9 @@ import { defineNuxtConfig } from "nuxt";
 export default defineNuxtConfig({
   head: {
     title: "ITONOKO",
+    ssr: true,
+    server: "static",
+
     htmlAttrs: {
       lang: "ja",
     },
