@@ -5,7 +5,18 @@ export default defineConfig({
   theme: {
     extend: {
       colors: {
-        "hair-black": "#090909",
+        primary: {
+          default: "#59B4CE",
+          "100": "#F2F9FC",
+          "200": "#D3FDFD",
+          "300": "#65CEEB",
+          "400": "#5FC2DE",
+          "500": "#59B4CE",
+          "600": "#59B4CE",
+          "700": "#29535E",
+          "800": "#29535E",
+          "900": "#29535E",
+        },
       },
       fontFamily: {
         sans: [

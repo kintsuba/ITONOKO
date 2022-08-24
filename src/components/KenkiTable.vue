@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-stretch">
     <div
-      class="border py-1.5 px-5 mr-1.5 mb-3"
+      class="border border-primary-500 py-1.5 px-3 mr-1.5 mb-3"
       :class="[isDisplayedSearchMenu ? 'ml-1.5' : 'ml-auto']"
     >
       <div class="flex justify-end">
@@ -9,16 +9,16 @@
           class="flex items-center cursor-pointer"
           @click="isDisplayedSearchMenu = !isDisplayedSearchMenu"
         >
-          <IconSearchRounded width="36" height="36" color="#1f2937" />
-          <span class="">検索</span>
+          <IconSearchRounded width="36" height="36" color="#59B4CE" />
+          <span class="text-primary-500">検索</span>
           <Transition name="spin" mode="out-in">
             <IconArrowDropDown
               width="36"
               height="36"
-              color="#1f2937"
+              color="#59B4CE"
               v-if="!isDisplayedSearchMenu"
             />
-            <IconArrowDropUp width="36" height="36" color="#1f2937" v-else />
+            <IconArrowDropUp width="36" height="36" color="#59B4CE" v-else />
           </Transition>
         </div>
       </div>
@@ -30,7 +30,7 @@
           <label class="font-bold mr-3">建姫名</label>
           <input
             type="text"
-            class="rounded col-span-2"
+            class="rounded col-span-2 bg-primary-100 border-primary-500 focus:border-primary-600 focus:ring-primary-600 focus-visible:outline-none"
             placeholder="糸ノコ"
             v-model="inputName"
           />
@@ -39,12 +39,12 @@
           <fieldset class="flex items-center col-span-2">
             <label
               v-for="rarity in rarities"
-              class="flex gap-1 items-center mx-2"
+              class="flex gap-1 items-center mr-1.5 md:mr-3"
             >
               <input
                 type="checkbox"
                 :value="rarity"
-                class="rounded"
+                class="rounded text-primary-500 focus:ring-primary-500"
                 v-model="checkedRarities"
               />
               <p>{{ rarity }}</p>
@@ -53,11 +53,14 @@
 
           <label class="font-bold mr-2">種別</label>
           <fieldset class="flex items-center col-span-2">
-            <label v-for="type in types" class="flex gap-1 items-center mx-2">
+            <label
+              v-for="type in types"
+              class="flex gap-1 items-center mr-1.5 md:mr-3"
+            >
               <input
                 type="checkbox"
                 :value="type"
-                class="rounded"
+                class="rounded text-primary-500 focus:ring-primary-500"
                 v-model="checkeTypes"
               />
               <p>{{ type }}</p>
@@ -69,9 +72,9 @@
 
     <div class="overflow-x-auto">
       <div class="p-1.5 w-full inline-block align-middle">
-        <div class="overflow-hidden border rounded">
-          <table class="min-w-full divide-y divide-gray-200">
-            <thead class="bg-[#848484]">
+        <div class="overflow-hidden border-primary-500 border rounded">
+          <table class="min-w-full divide-y divide-primary-500">
+            <thead class="bg-primary-500">
               <tr>
                 <th
                   scope="col"
@@ -102,7 +105,7 @@
                 <th scope="col"></th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-gray-200">
+            <tbody class="divide-y divide-blue-200">
               <tr
                 v-for="kenki in isFiltered ? filteredKenkis : kenkis"
                 :key="kenki.name"
@@ -135,7 +138,7 @@
                 <td
                   class="pr-2 text-sm text-center text-gray-800 w-1 cursor-pointer"
                 >
-                  <IconArrowDropDown width="36" height="36" color="#1f2937" />
+                  <IconArrowDropDown width="36" height="36" color="#59B4CE" />
                 </td>
               </tr>
             </tbody>
