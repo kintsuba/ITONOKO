@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-primary-100 text-primary-900 h-screen">
     <ItonokoHeader />
     <NuxtPage />
   </div>
