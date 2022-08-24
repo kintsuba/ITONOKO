@@ -10,7 +10,7 @@
           @click="isDisplayedSearchMenu = !isDisplayedSearchMenu"
         >
           <IconSearchRounded width="36" height="36" color="#1f2937" />
-          <span class="text-lg">検索</span>
+          <span class="">検索</span>
           <Transition name="spin" mode="out-in">
             <IconArrowDropDown
               width="36"
@@ -26,7 +26,7 @@
         v-if="isDisplayedSearchMenu"
         class="mx-auto w-full lg:w-5/7 xl:w-4/7 my-8"
       >
-        <div class="grid grid-cols-3 gap-4 items-center">
+        <div class="grid md:grid-cols-3 gap-4 items-center">
           <label class="font-bold mr-3">建姫名</label>
           <input
             type="text"
@@ -39,7 +39,7 @@
           <fieldset class="flex items-center col-span-2">
             <label
               v-for="rarity in rarities"
-              class="flex gap-1 items-center text-lg mx-2"
+              class="flex gap-1 items-center mx-2"
             >
               <input
                 type="checkbox"
@@ -53,10 +53,7 @@
 
           <label class="font-bold mr-2">種別</label>
           <fieldset class="flex items-center col-span-2">
-            <label
-              v-for="type in types"
-              class="flex gap-1 items-center text-lg mx-2"
-            >
+            <label v-for="type in types" class="flex gap-1 items-center mx-2">
               <input
                 type="checkbox"
                 :value="type"
