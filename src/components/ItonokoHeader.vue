@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-hair-black p-2 mt-0 w-full">
+  <header class="bg-primary-500 p-2 mt-0 w-full shadow">
     <div class="container mx-auto flex flex-wrap items-center">
       <div
         class="flex w-full justify-center md:justify-start text-white font-extrabold"
