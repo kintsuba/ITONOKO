@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-stretch">
     <div
-      class="border border-primary-500 py-1.5 px-5 mr-1.5 mb-3"
+      class="border border-primary-500 py-1.5 px-3 mr-1.5 mb-3"
       :class="[isDisplayedSearchMenu ? 'ml-1.5' : 'ml-auto']"
     >
       <div class="flex justify-end">
@@ -39,7 +39,7 @@
           <fieldset class="flex items-center col-span-2">
             <label
               v-for="rarity in rarities"
-              class="flex gap-1 items-center mx-2"
+              class="flex gap-1 items-center mr-1.5 md:mr-3"
             >
               <input
                 type="checkbox"
@@ -53,7 +53,10 @@
 
           <label class="font-bold mr-2">種別</label>
           <fieldset class="flex items-center col-span-2">
-            <label v-for="type in types" class="flex gap-1 items-center mx-2">
+            <label
+              v-for="type in types"
+              class="flex gap-1 items-center mr-1.5 md:mr-3"
+            >
               <input
                 type="checkbox"
                 :value="type"
