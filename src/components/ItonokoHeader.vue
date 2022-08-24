@@ -5,7 +5,7 @@
         class="flex w-full justify-center md:justify-start text-white font-extrabold"
       >
         <span class="text-2xl pl-2 py-2 font-display font-medium">
-          ITONOKO
+          ITONOKO Editor
         </span>
       </div>
     </div>

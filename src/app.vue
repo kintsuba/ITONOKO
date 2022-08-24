@@ -9,7 +9,7 @@
 const ItonokoHeader = resolveComponent("ItonokoHeader");
 
 useHead({
-  title: "ITONOKO",
+  title: "ITONOKO Editor",
   viewport: "width=device-width, initial-scale=1",
   charset: "utf-8",
   htmlAttrs: {

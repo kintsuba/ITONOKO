@@ -1,5 +1,5 @@
 {
-  "name": "itonoko",
+  "name": "itonoko-editor",
   "private": true,
   "scripts": {
     "build": "nuxt build",
