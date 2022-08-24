@@ -17,6 +17,12 @@ export default defineConfig({
           "800": "#29535E",
           "900": "#29535E",
         },
+        secondary: {
+          default: "#B9F0D9",
+          light: "#EEFBF4",
+          darker: "#A3EAD5",
+          dark: "#8ACECA",
+        },
       },
       fontFamily: {
         sans: [
