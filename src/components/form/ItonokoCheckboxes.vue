@@ -8,11 +8,7 @@
         type="checkbox"
         :value="value"
         class="rounded text-primary-500 focus:ring-primary-500"
-        v-model="modelValue"
-        @update:modelValue="
-          checkedValues = $event;
-          $emit('update:modelValue', checkedValues);
-        "
+        v-model="checkedValues"
       />
       <p>{{ value }}</p>
     </label>
@@ -26,9 +22,16 @@ const props = defineProps({
   modelValue: Array<String>,
 });
 
-const checkedValues = ref<string[]>();
-
 const emit = defineEmits<{
   (e: "update:modelValue", checkedValues: string[]);
 }>();
+
+const checkedValues = computed({
+  get(): Array<String> {
+    return props.modelValue;
+  },
+  set(value: string[]) {
+    emit("update:modelValue", value);
+  },
+});
 </script>
