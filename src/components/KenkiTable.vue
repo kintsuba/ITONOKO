@@ -28,44 +28,22 @@
       >
         <div class="grid md:grid-cols-3 gap-4 items-center">
           <label class="font-bold mr-3">建姫名</label>
-          <input
-            type="text"
-            class="rounded col-span-2 bg-primary-100 border-primary-500 focus:border-primary-600 focus:ring-primary-600 focus-visible:outline-none"
-            placeholder="糸ノコ"
-            v-model="inputName"
-          />
+          <ItonokoInput :placeholder="`糸ノコ`" v-model="inputName" />
 
           <label class="font-bold mr-2">レアリティ</label>
-          <fieldset class="flex items-center col-span-2">
-            <label
-              v-for="rarity in rarities"
-              class="flex gap-1 items-center mr-1.5 md:mr-3"
-            >
-              <input
-                type="checkbox"
-                :value="rarity"
-                class="rounded text-primary-500 focus:ring-primary-500"
-                v-model="checkedRarities"
-              />
-              <p>{{ rarity }}</p>
-            </label>
-          </fieldset>
+
+          <ItonokoCheckboxes
+            :values="rarities"
+            :valueName="`レアリティ`"
+            v-model="checkedRarities"
+          />
 
           <label class="font-bold mr-2">種別</label>
-          <fieldset class="flex items-center col-span-2">
-            <label
-              v-for="type in types"
-              class="flex gap-1 items-center mr-1.5 md:mr-3"
-            >
-              <input
-                type="checkbox"
-                :value="type"
-                class="rounded text-primary-500 focus:ring-primary-500"
-                v-model="checkeTypes"
-              />
-              <p>{{ type }}</p>
-            </label>
-          </fieldset>
+          <ItonokoCheckboxes
+            :values="types"
+            :valueName="`種別`"
+            v-model="checkedTypes"
+          />
         </div>
       </div>
     </div>
@@ -154,6 +132,9 @@ import IconArrowDropDown from "~icons/material-symbols/arrow-drop-down";
 import IconArrowDropUp from "~icons/material-symbols/arrow-drop-up";
 import IconSearchRounded from "~icons/material-symbols/search-rounded";
 
+import ItonokoCheckboxes from "@/components/form/ItonokoCheckboxes.vue";
+import ItonokoInput from "@/components/form/ItonokoInput.vue";
+
 const { data: kenkis } = await useFetch("/api/getKenkis");
 const rarities = ["R", "SR", "SSR"];
 const types = ["遊種", "兵種", "騎種", "王種", "神種"];
@@ -161,7 +142,7 @@ const types = ["遊種", "兵種", "騎種", "王種", "神種"];
 const isDisplayedSearchMenu = ref<boolean>(false);
 const inputName = ref<string>("");
 const checkedRarities = ref<string[]>(rarities);
-const checkeTypes = ref<string[]>(types);
+const checkedTypes = ref<string[]>(types);
 
 const isFiltered = computed(() => checkedRarities.value.length !== 0);
 
@@ -170,7 +151,7 @@ const filteredKenkis = computed(() => {
     (kenki) =>
       kenki.name.includes(inputName.value) &&
       checkedRarities.value.some((rarity) => rarity === kenki.rarity) &&
-      checkeTypes.value.some((type) => type === kenki.type)
+      checkedTypes.value.some((type) => type === kenki.type)
   );
 });
 </script>
