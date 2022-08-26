@@ -10,7 +10,7 @@
 <script setup lang="ts">
 const breadcrumbs = [
   {
-    name: "建機追加",
+    name: "スキル追加",
     to: "/KenkiAdd",
   },
 ];
