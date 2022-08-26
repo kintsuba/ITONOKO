@@ -18,10 +18,10 @@ export default defineConfig({
           "900": "#29535E",
         },
         secondary: {
-          default: "#B9F0D9",
-          light: "#EEFBF4",
-          darker: "#A3EAD5",
-          dark: "#8ACECA",
+          default: "#B5EEFF",
+          light: "#EDFBFF",
+          darker: "#A3D6E6",
+          dark: "#88B2BF",
         },
       },
       fontFamily: {
