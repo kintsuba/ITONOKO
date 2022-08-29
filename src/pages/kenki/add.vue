@@ -40,7 +40,7 @@ import ItonokoInput from "@/components/form/ItonokoInput.vue";
 const breadcrumbs = [
   {
     name: "建機追加",
-    to: "/KenkiAdd",
+    to: "/kenki/add",
   },
 ];
 

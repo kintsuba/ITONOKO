@@ -17,7 +17,7 @@ import ItonokoFab from "@/components/ItonokoFab.vue";
 const breadcrumbs = [
   {
     name: "建機編集",
-    to: "/KenkiAdd",
+    to: "/kenki/list",
   },
 ];
 </script>

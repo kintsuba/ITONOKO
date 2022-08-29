@@ -14,7 +14,7 @@ import ItonokoFab from "@/components/ItonokoFab.vue";
 const breadcrumbs = [
   {
     name: "スキル編集",
-    to: "/KenkiAdd",
+    to: "/skill/list",
   },
 ];
 </script>
