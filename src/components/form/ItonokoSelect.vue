@@ -1,6 +1,5 @@
 <template>
   <select
-    :title="title"
     class="bg-primary-100 px-3 py-2 rounded border-primary-500 focus:border-primary-600 focus:ring-primary-600 focus-visible:outline-none"
     v-model="SelectedValue"
   >
@@ -12,10 +11,8 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  title: string;
   values: string[];
-  modelValue: string;
-  placeholder: string;
+  modelValue?: string;
 }>();
 
 const emit = defineEmits<{
