@@ -135,7 +135,7 @@ import IconSearchRounded from "~icons/material-symbols/search-rounded";
 import ItonokoCheckboxes from "@/components/form/ItonokoCheckboxes.vue";
 import ItonokoInput from "@/components/form/ItonokoInput.vue";
 
-const { data: kenkis } = await useFetch("/api/getKenkis");
+const { data: kenkis } = await useFetch("/api/kenkis/get");
 const rarities = ["R", "SR", "SSR"];
 const types = ["遊種", "兵種", "騎種", "王種", "神種"];
 
