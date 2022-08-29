@@ -28,22 +28,22 @@ import ItonokoCard from "@/components/ItonokoCard.vue";
 
 const menus = [
   {
-    to: "/KenkiList",
+    to: "/kenki/list",
     title: "建姫編集",
     description: "建姫を確認・修正したいとき",
   },
   {
-    to: "/KenkiAdd",
+    to: "/kenki/add",
     title: "建姫追加",
     description: "新しく建姫を追加したいとき",
   },
   {
-    to: "/SkillList",
+    to: "/skill/list",
     title: "スキル編集",
     description: "スキルを確認・修正したいとき",
   },
   {
-    to: "/SkillAdd",
+    to: "/skill/add",
     title: "スキル追加",
     description: "新しくスキルを追加したいとき",
   },
