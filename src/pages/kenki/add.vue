@@ -10,7 +10,7 @@
         >
           <label class="font-bold mr-3">建姫名</label>
 
-          <ItonokoInput :placeholder="`糸ノコ`"></ItonokoInput>
+          <ItonokoInput placeholder="糸ノコ" class="col-span-2"></ItonokoInput>
 
           <label class="font-bold mr-3">レアリティ</label>
           <ItonokoSelect

@@ -1,5 +1,5 @@
 <template>
-  <fieldset class="flex items-center col-span-2">
+  <fieldset class="flex items-center">
     <label
       v-for="value in values"
       class="flex gap-1 items-center mr-1.5 md:mr-3"

@@ -1,7 +1,7 @@
 <template>
   <input
     type="text"
-    class="rounded col-span-2 bg-primary-100 border-primary-500 focus:border-primary-600 focus:ring-primary-600 focus-visible:outline-none"
+    class="rounded bg-primary-100 border-primary-500 focus:border-primary-600 focus:ring-primary-600 focus-visible:outline-none"
     :placeholder="placeholder"
     v-model="inputedValue"
   />
