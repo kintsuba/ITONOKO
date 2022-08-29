@@ -1,4 +1,6 @@
-export interface Kenki {
+import { Selectable } from "./interface";
+
+export interface Kenki extends Selectable {
   id: string;
   name: string;
   rarity: string;
