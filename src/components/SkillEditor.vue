@@ -81,6 +81,7 @@ const createSkill = async () => {
       description: description.value ?? "",
       category: skillCategories.value.find((sc) => sc.name === category.value),
     },
+    initialCache: false,
   });
 
   if (!(res instanceof Error)) {

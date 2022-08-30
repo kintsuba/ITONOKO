@@ -107,7 +107,9 @@ import IconEdit from "~icons/material-symbols/edit";
 const ItonokoInput = resolveComponent("form/ItonokoInput");
 const OutlinedButton = resolveComponent("form/button/OutlinedButton");
 
-const { data: skills } = await useFetch("/api/skills/get");
+const { data: skills } = await useFetch("/api/skills/get", {
+  initialCache: false,
+});
 
 const isDisplayedSearchMenu = ref<boolean>(false);
 const inputName = ref<string>("");
