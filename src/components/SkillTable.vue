@@ -80,9 +80,7 @@
                   {{ skill.description }}
                 </td>
 
-                <td
-                  class="pr-2 text-sm text-center text-gray-800 w-1 cursor-pointer"
-                >
+                <td class="pr-2 text-sm text-center text-gray-800 w-1">
                   <OutlinedButton
                     class="flex gap-1 justify-center md:w-25"
                     @click="$router.push('/skill/edit/' + skill.id)"
