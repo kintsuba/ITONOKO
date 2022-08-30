@@ -767,10 +767,10 @@
     protobufjs "^7.0.0"
     yargs "^16.2.0"
 
-"@iconify/json@^2.1.96":
-  version "2.1.96"
-  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-2.1.96.tgz#65e6e40fbe53bfbc3ca438d24e33d100bf8062a3"
-  integrity sha512-wmc5KRqvKAlAr0bQz3P1UnUCXC9hYu1o89GZFR5Mr5NiUhhNHdbZyosOPnDHXduOa9lTM/ve8/Vo1vR55hCF5A==
+"@iconify/json@^2.1.100":
+  version "2.1.100"
+  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-2.1.100.tgz#47a1b771a4a5bef321eda3e7c639a84d366ca465"
+  integrity sha512-ztPJgsoqJQ2T216O0Wl94YmK085kLWeu25SekkwZaaTVZ5XaByER/h84AWGaKz7sBnnvdWJ+8ExAGyBGdr44bg==
   dependencies:
     "@iconify/types" "*"
     pathe "^0.3.0"
