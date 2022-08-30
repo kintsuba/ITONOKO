@@ -75,7 +75,7 @@ const createSkill = async () => {
   const res = await useFetch("/api/skills/set", {
     method: "POST",
     body: {
-      id: uuidv4(),
+      id: props.editingSkill ? props.editingSkill.id : uuidv4(),
       name: name.value,
       inGameDescription: inGameDescription.value,
       description: description.value ?? "",
