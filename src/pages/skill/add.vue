@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-const SkillEditor = resolveComponent("SkillEditor");
+const SkillEditor = resolveComponent("editor/SkillEditor");
 
 const breadcrumbs = [
   {

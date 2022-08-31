@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import IconAdd from "~icons/material-symbols/add";
 
-const SkillTable = resolveComponent("SkillTable");
+const SkillTable = resolveComponent("table/SkillTable");
 const ExtendedFab = resolveComponent("form/button/ExtendedFab");
 
 const breadcrumbs = [

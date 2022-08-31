@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { Skill } from "@/types/skill";
-const SkillEditor = resolveComponent("SkillEditor");
+const SkillEditor = resolveComponent("editor/SkillEditor");
 
 const route = useRoute();
 const id = route.params.id as string;

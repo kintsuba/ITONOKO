@@ -16,7 +16,7 @@
 <script setup lang="ts">
 import IconAdd from "~icons/material-symbols/add";
 
-const KenkiTable = resolveComponent("KenkiTable");
+const KenkiTable = resolveComponent("table/KenkiTable");
 const ExtendedFab = resolveComponent("form/button/ExtendedFab");
 
 const breadcrumbs = [
