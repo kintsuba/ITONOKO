@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primary-100 text-primary-900 h-screen">
+  <div>
     <ItonokoHeader />
     <NuxtPage />
   </div>
@@ -20,6 +20,9 @@ useHead({
   htmlAttrs: {
     lang: "ja",
     prefix: "og: http://ogp.me/ns#",
+  },
+  bodyAttrs: {
+    class: "bg-primary-100 text-primary-900",
   },
   link: [
     {
