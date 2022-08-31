@@ -20,7 +20,11 @@ const { data: editingSkill } = await useFetch("/api/skills/get/id/" + id, {
 
 const breadcrumbs = [
   {
-    name: "スキル追加",
+    name: "スキル編集",
+    to: "/skill/add",
+  },
+  {
+    name: (editingSkill.value as Skill).name,
     to: "/skill/add",
   },
 ];
