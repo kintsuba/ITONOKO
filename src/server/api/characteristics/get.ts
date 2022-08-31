@@ -22,7 +22,7 @@ export default async (request, response) => {
       id: doc.id,
       ...doc.data(),
     };
-  });
+  }) as Characteristic[];
 
-  return characteristicsData as Characteristic[];
+  return characteristicsData.sort((a, b) => a.name.localeCompare(b.name));
 };

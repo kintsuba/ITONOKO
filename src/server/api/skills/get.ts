@@ -22,7 +22,7 @@ export default async (request, response) => {
       id: doc.id,
       ...doc.data(),
     };
-  });
+  }) as Skill[];
 
-  return skillsData as Skill[];
+  return skillsData.sort((a, b) => a.name.localeCompare(b.name));
 };
