@@ -1,0 +1,138 @@
+<template>
+  <div class="flex flex-col items-stretch">
+    <div
+      class="border border-primary-500 py-1.5 px-3 mr-1.5 mb-3 rounded"
+      :class="[isDisplayedSearchMenu ? 'ml-1.5' : 'ml-auto']"
+    >
+      <div class="flex justify-end">
+        <div
+          class="flex items-center cursor-pointer"
+          @click="isDisplayedSearchMenu = !isDisplayedSearchMenu"
+        >
+          <IconSearchRounded width="36" height="36" color="#59B4CE" />
+          <span class="text-primary-500">検索</span>
+          <Transition name="spin" mode="out-in">
+            <IconArrowDropDown
+              width="36"
+              height="36"
+              color="#59B4CE"
+              v-if="!isDisplayedSearchMenu"
+            />
+            <IconArrowDropUp width="36" height="36" color="#59B4CE" v-else />
+          </Transition>
+        </div>
+      </div>
+      <div
+        v-if="isDisplayedSearchMenu"
+        class="mx-auto w-full lg:w-5/7 xl:w-4/7 my-8"
+      >
+        <div class="grid md:grid-cols-3 gap-4 items-center">
+          <label class="font-bold mr-3">特徴名</label>
+          <ItonokoInput placeholder="おしとやか" v-model="inputName" />
+        </div>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto">
+      <div class="p-1.5 w-full inline-block align-middle">
+        <div class="overflow-hidden border-primary-500 border rounded">
+          <table class="min-w-full divide-y divide-primary-500">
+            <thead class="bg-primary-500">
+              <tr>
+                <th
+                  scope="col"
+                  class="px-6 py-3 text-sm font-bold text-center text-gray-50"
+                >
+                  特徴名
+                </th>
+                <th
+                  scope="col"
+                  class="px-6 py-3 text-sm font-bold text-center text-gray-50"
+                >
+                  最大ランク
+                </th>
+                <th
+                  scope="col"
+                  class="px-6 py-3 text-sm font-bold text-center text-gray-50"
+                >
+                  ゲーム内説明（Rank1）
+                </th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-blue-200">
+              <tr
+                v-for="characteristic in isFiltered
+                  ? filteredCharacteristics
+                  : characteristics"
+                :key="characteristic.name"
+              >
+                <td
+                  class="px-6 py-4 text-sm text-center text-gray-800 whitespace-nowrap"
+                >
+                  {{ characteristic.name }}
+                </td>
+                <td
+                  class="hidden md:block px-6 py-4 text-sm text-center text-gray-800 whitespace-nowrap"
+                >
+                  {{ characteristic.maxRank }}
+                </td>
+                <td class="px-6 py-4 text-sm text-center text-gray-800">
+                  {{ characteristic.rankDetails[0].inGameDescription }}
+                </td>
+
+                <td class="pr-2 text-sm text-center text-gray-800 w-1">
+                  <OutlinedButton
+                    class="flex gap-1 justify-center md:w-25"
+                    @click="
+                      $router.push('/characteristic/edit/' + characteristic.id)
+                    "
+                  >
+                    <IconEdit width="18" height="18" color="currentColor" />
+                    <span class="hidden md:block">編集</span>
+                  </OutlinedButton>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import IconArrowDropDown from "~icons/material-symbols/arrow-drop-down";
+import IconArrowDropUp from "~icons/material-symbols/arrow-drop-up";
+import IconSearchRounded from "~icons/material-symbols/search-rounded";
+import IconEdit from "~icons/material-symbols/edit";
+
+const ItonokoInput = resolveComponent("form/ItonokoInput");
+const OutlinedButton = resolveComponent("form/button/OutlinedButton");
+
+const { data: characteristics } = await useFetch("/api/characteristics/get", {
+  initialCache: false,
+});
+
+const isDisplayedSearchMenu = ref<boolean>(false);
+const inputName = ref<string>("");
+
+const isFiltered = computed(() => inputName.value !== "");
+const filteredCharacteristics = computed(() => {
+  return characteristics.value.filter((characteristic) =>
+    characteristic.name.includes(inputName.value)
+  );
+});
+</script>
+
+<style scoped>
+.spin-enter-active {
+  transition: transform 0.25s ease;
+}
+.spin-enter-from {
+  transform: rotateZ(180deg);
+}
+.spin-leave-to {
+  transform: rotateZ(0deg);
+}
+</style>
