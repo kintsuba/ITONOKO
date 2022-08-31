@@ -47,5 +47,15 @@ const menus = [
     title: "スキル追加",
     description: "新しくスキルを追加したいとき",
   },
+  {
+    to: "/characteristic/list",
+    title: "特徴編集",
+    description: "特徴を確認・修正したいとき",
+  },
+  {
+    to: "/characteristic/add",
+    title: "特徴追加",
+    description: "新しくスキルを追加したいとき",
+  },
 ];
 </script>
