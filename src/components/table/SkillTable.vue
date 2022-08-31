@@ -61,7 +61,13 @@
                 <th scope="col"></th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-blue-200">
+            <transition-group
+              tag="tbody"
+              class="divide-y divide-blue-200"
+              enter-active-class="animate-animated animate-fadeIn"
+              leave-active-class="absolute"
+              move-class="transition-all"
+            >
               <tr
                 v-for="skill in isFiltered ? filteredSkills : skills"
                 :key="skill.name"
@@ -90,7 +96,7 @@
                   </OutlinedButton>
                 </td>
               </tr>
-            </tbody>
+            </transition-group>
           </table>
         </div>
       </div>
