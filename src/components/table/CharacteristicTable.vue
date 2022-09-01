@@ -60,7 +60,13 @@
                 <th scope="col"></th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-blue-200">
+            <transition-group
+              tag="tbody"
+              class="divide-y divide-blue-200"
+              enter-active-class="animate-animated animate-fadeIn"
+              leave-active-class="absolute hidden"
+              move-class="transition-all"
+            >
               <tr
                 v-for="characteristic in isFiltered
                   ? filteredCharacteristics
@@ -93,7 +99,7 @@
                   </OutlinedButton>
                 </td>
               </tr>
-            </tbody>
+            </transition-group>
           </table>
         </div>
       </div>
