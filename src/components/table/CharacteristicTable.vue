@@ -47,7 +47,7 @@
                 </th>
                 <th
                   scope="col"
-                  class="px-6 py-3 text-sm font-bold text-center text-gray-50"
+                  class="hidden md:block px-6 py-3 text-sm font-bold text-center text-gray-50"
                 >
                   最大ランク
                 </th>
