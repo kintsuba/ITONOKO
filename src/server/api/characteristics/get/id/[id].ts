@@ -9,7 +9,7 @@ if (!apps.length) {
     credential: cert({
       projectId: process.env.FIREBASE_PROJECT_ID,
       clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-      privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, "\n"),
+      privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
     }),
   });
 }
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
   const db = getFirestore();
   const characteristicsSnap = await db
     .collection("characteristics")
-    .doc(event.context.params.id)
+    .doc(event.context.params ? event.context.params.id : "")
     .get();
 
   const characteristicsData = {

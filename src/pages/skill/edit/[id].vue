@@ -14,9 +14,7 @@ const SkillEditor = resolveComponent("editor/SkillEditor");
 
 const route = useRoute();
 const id = route.params.id as string;
-const { data: editingSkill } = await useFetch("/api/skills/get/id/" + id, {
-  initialCache: false,
-});
+const { data: editingSkill } = await useFetch("/api/skills/get/id/" + id);
 
 const breadcrumbs = [
   {

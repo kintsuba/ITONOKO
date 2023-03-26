@@ -14,12 +14,12 @@ const props = defineProps({
 });
 
 const emit = defineEmits<{
-  (e: "update:modelValue", inputedValue: string);
+  (e: "update:modelValue", inputedValue: string): void;
 }>();
 
 const inputedValue = computed({
   get(): string {
-    return props.modelValue;
+    return props.modelValue ?? "";
   },
   set(value: string) {
     emit("update:modelValue", value);

@@ -14,9 +14,7 @@ const description = ref(
 );
 
 useHead({
-  title,
-  viewport: "width=device-width, initial-scale=1",
-  charset: "utf-8",
+  title: "ITONOKO",
   htmlAttrs: {
     lang: "ja",
     prefix: "og: http://ogp.me/ns#",
@@ -27,19 +25,16 @@ useHead({
   link: [
     {
       rel: "apple-touch-icon",
-      size: "180x180",
       href: "/apple-touch-icon.png",
     },
     {
       rel: "icon",
       type: "image/png",
-      size: "32x32",
       href: "/favicon-32x32.png",
     },
     {
       rel: "icon",
       type: "image/png",
-      size: "16x16",
       href: "/favicon-16x16.png",
     },
     {

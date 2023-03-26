@@ -16,12 +16,12 @@ const props = defineProps<{
 }>();
 
 const emit = defineEmits<{
-  (e: "update:modelValue", SelectedValue: string);
+  (e: "update:modelValue", SelectedValue: string): void;
 }>();
 
 const SelectedValue = computed({
   get(): string {
-    return props.modelValue;
+    return props.modelValue ?? "";
   },
   set(value: string) {
     emit("update:modelValue", value);

@@ -17,10 +17,7 @@ const CharacteristicEditor = resolveComponent("editor/CharacteristicEditor");
 const route = useRoute();
 const id = route.params.id as string;
 const { data: editingCharacteristic } = await useFetch(
-  "/api/characteristics/get/id/" + id,
-  {
-    initialCache: false,
-  }
+  "/api/characteristics/get/id/" + id
 );
 
 const breadcrumbs = [

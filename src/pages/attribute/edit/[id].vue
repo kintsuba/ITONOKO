@@ -15,10 +15,7 @@ const AttributeEditor = resolveComponent("editor/AttributeEditor");
 const route = useRoute();
 const id = route.params.id as string;
 const { data: editingAttribute } = await useFetch(
-  "/api/attributes/get/id/" + id,
-  {
-    initialCache: false,
-  }
+  "/api/attributes/get/id/" + id
 );
 
 const breadcrumbs = [

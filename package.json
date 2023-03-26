@@ -8,15 +8,15 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@iconify/json": "^2.1.100",
+    "@iconify/json": "^2.2.39",
+    "@types/uuid": "^9.0.1",
     "@windicss/plugin-animations": "^1.0.9",
-    "nuxt": "3.0.0-rc.8",
-    "nuxt-windicss": "^2.5.1",
-    "unplugin-icons": "^0.14.8"
+    "nuxt": "3.3.2",
+    "nuxt-windicss": "^2.6.0",
+    "unplugin-icons": "^0.15.3"
   },
   "dependencies": {
-    "firebase": "^9.9.3",
-    "firebase-admin": "^11.0.1",
-    "uuid": "^8.3.2"
+    "firebase": "^9.18.0",
+    "firebase-admin": "^11.5.0"
   }
 }

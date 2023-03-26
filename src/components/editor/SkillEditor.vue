@@ -23,7 +23,7 @@
       />
       <label class="font-bold mr-3">カテゴリ</label>
       <ItonokoSelect
-        :values="skillCategories.map((sc) => sc.name)"
+        :values="skillCategories?.map((sc) => sc.name)"
         class="col-span-2"
         v-model="category"
       />
@@ -58,10 +58,10 @@ const inGameDescription = ref<string>(
   props.editingSkill ? props.editingSkill.inGameDescription : ""
 );
 const description = ref<string>(
-  props.editingSkill ? props.editingSkill.description : ""
+  props.editingSkill ? props.editingSkill.description ?? "" : ""
 );
 const category = ref<string>(
-  props.editingSkill ? props.editingSkill.category.name : ""
+  props.editingSkill ? props.editingSkill.category.name ?? "" : ""
 );
 
 const creatable = computed(
@@ -79,9 +79,8 @@ const createSkill = async () => {
       name: name.value,
       inGameDescription: inGameDescription.value,
       description: description.value ?? "",
-      category: skillCategories.value.find((sc) => sc.name === category.value),
+      category: skillCategories.value?.find((sc) => sc.name === category.value),
     },
-    initialCache: false,
   });
 
   if (!(res instanceof Error)) {

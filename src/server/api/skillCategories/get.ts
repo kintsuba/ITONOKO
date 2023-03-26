@@ -9,12 +9,12 @@ if (!apps.length) {
     credential: cert({
       projectId: process.env.FIREBASE_PROJECT_ID,
       clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-      privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, "\n"),
+      privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
     }),
   });
 }
 
-export default async (request, response) => {
+export default defineEventHandler(async (event) => {
   const db = getFirestore();
   const scSnap = await db.collection("skillCategories").get();
   const scData = scSnap.docs.map((doc) => {
@@ -25,4 +25,4 @@ export default async (request, response) => {
   }) as SkillCategory[];
 
   return scData.sort((a, b) => b.name.localeCompare(a.name));
-};
+});

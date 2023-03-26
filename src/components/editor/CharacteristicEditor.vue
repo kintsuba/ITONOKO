@@ -144,7 +144,6 @@ const createSkill = async () => {
       maxRank: rankDetails.value.length,
       rankDetails: rankDetails.value,
     },
-    initialCache: false,
   });
 
   if (!(res instanceof Error)) {

@@ -147,7 +147,7 @@ const checkedTypes = ref<string[]>(types);
 const isFiltered = computed(() => checkedRarities.value.length !== 0);
 
 const filteredKenkis = computed(() => {
-  return kenkis.value.filter(
+  return kenkis.value?.filter(
     (kenki) =>
       kenki.name.includes(inputName.value) &&
       checkedRarities.value.some((rarity) => rarity === kenki.rarity) &&

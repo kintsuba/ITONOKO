@@ -46,7 +46,6 @@ const createAttribute = async () => {
       id: props.editingAttribute ? props.editingAttribute.id : uuidv4(),
       name: name.value,
     },
-    initialCache: false,
   });
 
   if (!(res instanceof Error)) {

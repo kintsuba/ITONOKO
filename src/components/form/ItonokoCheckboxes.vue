@@ -23,12 +23,12 @@ const props = defineProps({
 });
 
 const emit = defineEmits<{
-  (e: "update:modelValue", checkedValues: string[]);
+  (e: "update:modelValue", checkedValues: string[]): void;
 }>();
 
 const checkedValues = computed({
-  get(): Array<String> {
-    return props.modelValue;
+  get() {
+    return (props.modelValue ?? []) as string[];
   },
   set(value: string[]) {
     emit("update:modelValue", value);
